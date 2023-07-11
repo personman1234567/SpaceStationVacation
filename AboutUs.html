@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        
+        <link rel="stylesheet" href="FinalCSS.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Orbitron&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="FinalCSS.css">
+        
+        <title>Ethan's Final Project</title>
+        
+        <style>
+            body{
+                width: 100%;
+                height: 900px;
+                background: linear-gradient(#32223b, #1d1422);
+            }   
+        </style>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <script>
+        
+            /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("openBar").style.display = 'none';
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("openBar").style.display = 'block';
+        }
+            
+        $("#rocket").click(function(){
+            alert("No this is not an actual picture of Zalem Station.");
+        });
+
+        </script>
+        
+        
+    </head>
+    
+    <body>
+
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="index.html">Home Page</a>
+          <a href="Login.html">Book a Suite</a>
+          <a href="SpaceSound.html">Station Sound</a>
+        </div>
+
+        <!-- Use any element to open the sidenav -->
+        <div id="openBar" onclick="openNav()">
+            <img id="menuIcon" src="MenuIcon.png" alt="hamburgerIcon">
+        </div>
+        
+        <img id="rocket" src="ship.png" alt="ship">
+        
+        <div id="aboutWrapper">
+            <h1 class="titleText">About us</h1>
+        </div>
+        
+        <div id="descriptionWrapper">
+            <p class="PText">Ever since our founding year of 2045, we have strived to fulfill the longing of mankind to visit space. After countless days of hardwork from the brilliant minds of 15,000 dedicated engineers and scientists, our team has made this dream a reality. Say hello to the thing making this all possible, Zalem Station. Our brilliant team has developed the technology to give us artificial gravity, and day and night cycles. It's like you're still on Earth! Discover everything Zalem station has to offer, from the beautiful 360 degree observation deck, to the scenic garden area with a fully functional artificial ecosystem, to all of the dining options with food from all over the world. We look forward to seeing you!</p>
+        </div>
+        
+    </body>
+</html>

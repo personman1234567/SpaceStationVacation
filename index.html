@@ -1,0 +1,112 @@
+<!--
+    Name: Ethan Duke
+    Pawprint: esdnk7
+    Date: 12-1-20
+    Challenge: Final Project
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        
+        <link rel="stylesheet" href="FinalCSS.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Orbitron&display=swap" rel="stylesheet">
+        
+        <title>Ethan's Final Project</title>
+    
+    <style>
+        body{
+            background-color: #000000;
+            width: 100%;
+        }    
+    </style>
+        
+    <script>
+        
+        //This code was inspired by https://www.w3schools.com/howto/howto_js_slideshow.asp
+        var slideIndex = 0;
+
+        function showSlides(x) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex = x;
+          if (slideIndex >= slides.length) {
+              slideIndex = 0;
+          }    
+          slides[slideIndex].style.display = "block";  
+        }
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("openBar").style.display = 'none';
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("openBar").style.display = 'block';
+        }
+        
+    </script>
+        
+    </head>
+    
+    <body onload="showSlides(0)">
+        
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="AboutUs.html">About Us</a>
+          <a href="Login.html">Book a Suite</a>
+          <a href="SpaceSound.html">Station Sound</a>
+        </div>
+
+        <!-- Use any element to open the sidenav -->
+        <div id="openBar" onclick="openNav()">
+            <img id="menuIcon" src="MenuIcon.png" alt="hamburgerIcon">
+        </div>
+        
+        <div id="starBox">
+            <h1 id="mainTitle">spAce stAtion vAcAtion</h1>
+            <img class="rotate" id="starBackground" src="StarBackground.jpg" alt="stars">
+            <img id="planet" src="PlanetPicture.png" alt="planet">
+        </div>
+        
+        <div id="mainWrapper">
+            <h1 id="welcome" class="spacetext">Welcome Passenger</h1>
+            
+            <div class="slideshowContainer">
+            
+                <div class="mySlides fade">
+                    <img class="galleryImage" src="https://media.architecturaldigest.com/photos/5852bce2dcb583e908275d2d/master/w_2300,h_1533,c_limit/passengers-set-design-004.jpg" alt="1">
+                </div>
+
+              <div class="mySlides fade">
+                    <img class="galleryImage" src="https://specials-images.forbesimg.com/imageserve/5f32a940cfaae714cb3e207f/960x0.jpg?fit=scale" alt="luxury">
+              </div>
+
+              <div class="mySlides fade">
+                    <img class="galleryImage" src="https://i.imgur.com/8PacPDN.jpg" alt="garden">
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+            </div>
+        </div>
+        
+    </body>
+</html>

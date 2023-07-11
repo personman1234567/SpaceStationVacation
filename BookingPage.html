@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        
+        <link rel="stylesheet" href="FinalCSS.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Orbitron&display=swap" rel="stylesheet">
+        
+        <title>Ethan Dukes Final Project</title>
+        
+        <style>        
+            body{
+                width: 100%;
+                height: 1700px;
+                background: linear-gradient(#3b2846, #1d1422);
+            }
+        </style>
+    </head>
+    
+    <body>
+        
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="index.html">Home Page</a>
+          <a href="BookingPage.html">About Us</a>
+          <a href="SpaceSound.html">Station Sound</a>
+        </div>
+
+        <!-- Use any element to open the sidenav -->
+        <div id="openBar" onclick="openNav()">
+            <img id="menuIcon" src="MenuIcon.png" alt="hamburgerIcon">
+        </div>
+        
+        <div id="loggedIn">
+            <p class="PText">Logged In</p>
+        </div>
+        
+        <div id="observationDeck">
+            <img id="observationIMG" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bf1c052c-5c1d-4866-82d7-a90ff755235d/d2q7jic-225a9d3e-6363-4846-8557-fe8930ef6164.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvYmYxYzA1MmMtNWMxZC00ODY2LTgyZDctYTkwZmY3NTUyMzVkXC9kMnE3amljLTIyNWE5ZDNlLTYzNjMtNDg0Ni04NTU3LWZlODkzMGVmNjE2NC5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.gAeSFQkMGcmEYXQVozHscYTKVIo2CZz-UGspc81VcZs" alt="booking">
+            
+            <h1 id="bookingOptions">booking options</h1>
+        </div>
+        
+        <div id="columnsWrapper">
+            
+            <div id="card1" onclick="appear1()" onmouseover="change1()"  class="cardContainer">
+                    <img class="cardImage" src="https://pyxis.nymag.com/v1/imgs/59a/312/4c2a4e9146847f3c8d1753a9d8e4a65455-15-star-wars-hotel.rsquare.w700.jpg" alt="1">
+            </div>
+            
+            <div onclick="appear2()" onmouseover="change2()"  class="cardContainer">
+            
+                <img class="cardImage" src="https://www.hotelbusinessweekly.com/wp-content/uploads/2019/09/construction-begins-on-the-worlds-first-space-hotel-scheduled-to-open-in-2025.jpg" alt="2">
+            
+            </div>
+            
+            <div onclick="appear3()" onmouseover="change3()"  class="cardContainer">
+            
+                <img class="cardImage" src="https://mma.prnewswire.com/media/1274179/FNL_Space_RoomService_M.jpg?p=publish" alt="3">
+            
+            </div>
+        </div>
+        
+        <div id="optionsWrapper">
+            <div id="describeBox">
+            
+                <p id="descriptionText"></p>
+            
+            </div>
+            
+            <form id="EconomyForm" action="EconomyPurchase.php" method="GET"> 
+                <div id="purchaseBox1">     
+                    <div class="leftColumn">
+                        <h2 class="question">How many guests will you be booking for? (Please do not excede 10 guests)</h2>
+                        
+                        <input type="number" name="guestAmt" class="guestAmtInput" id="guestAmtInput1" min="1" max="10">
+                    </div>
+                    
+                    <div class="middleColumn">
+                        <h2 class="question">Would you like to add on our premium unlimited use recreation center pass for $250?</h2>
+                        
+                        <input id="recBox" class="checkBox" type="checkbox" value="If yes, click box">
+                        <label class="checkText">If yes, check the box</label>
+                        
+                        <input class="submitButton" type="button" value="Submit" onclick="updateCost1()">
+                    </div>
+                    
+                    <div class="rightColumn">
+                        <h2 class="question">Would you like to reserve a pass to the space deck for $120 per person?</h2>
+                        
+                        <input id="deckBox" class="checkBox" type="checkbox" value="If yes, click box">
+                        <label class="checkText">If yes, check the box</label>
+                    </div>
+                    
+                    <div class="totalWrapper">
+                        <div class="totalBox">
+                            <p id="totalText" class="totalText">
+                                Total:
+                            </p>  
+                        </div>
+                    </div>
+                </div> 
+            </form> 
+            
+            <form id="SecondForm" action="SecondPurchase.php" method="GET">
+                <div id="purchaseBox2">
+                    <div class="leftColumn">
+                        <h2 class="question">How many guests will you be booking for? (Please do not excede 10 guests)</h2>
+                        
+                        <input type="number" name="guestAmt" class="guestAmtInput" id="guestAmtInput2" min="1" max="10">
+                    </div>
+                    
+                    <div class="middleColumn">
+                        <h2 class="question">Would you like to add on our premium unlimited use recreation center pass for $250?</h2>
+                        
+                        <input id="recBox2" class="checkBox" type="checkbox" value="If yes, click box">
+                        <label class="checkText">If yes, check the box</label>
+                        
+                        <input class="submitButton" type="button" value="Submit" onclick="updateCost2()">
+                    </div>
+                    
+                    <div class="rightColumn">
+                        <h2 class="question">Would you like to reserve a pass to the space deck for $120 per person?</h2>
+                        
+                        <input id="deckBox2" class="checkBox" type="checkbox" value="If yes, click box">
+                        <label class="checkText">If yes, check the box</label>
+                    </div>
+                    
+                    <div class="totalWrapper">
+                        <div class="totalBox">
+                            <p id="totalText2" class="totalText">
+                                Total:
+                            </p>  
+                        </div>
+                    </div>
+                </div> 
+            </form>
+            
+            <form id="FirstForm" action="FirstPurchase.php" method="GET">
+                <div id="purchaseBox3">
+                    <div class="leftColumn">
+                        <h2 class="question">How many guests will you be booking for? (Please do not excede 10 guests)</h2>
+                        
+                        <input type="number" name="guestAmt" class="guestAmtInput" id="guestAmtInput3" min="1" max="10">
+                    </div>
+                    
+                    <div class="middleColumn">
+                        <h2 class="question">Would you like to add on our premium unlimited use recreation center pass for $250?</h2>
+                        
+                        <input id="recBox3" class="checkBox" type="checkbox" value="If yes, click box">
+                        <label class="checkText">If yes, check the box</label>
+                        
+                        <input class="submitButton" type="button" value="Submit" onclick="updateCost3()">
+                    </div>
+                    
+                    <div class="rightColumn">
+                        <h2 class="question">Would you like to reserve a pass to the space deck for $120 per person?</h2>
+                        
+                        <input id="deckBox3" class="checkBox" type="checkbox" value="If yes, click box">
+                        <label class="checkText">If yes, check the box</label>
+                    </div>
+                    
+                    <div class="totalWrapper">
+                        <div class="totalBox">
+                            <p id="totalText3" class="totalText">
+                                Total:
+                            </p>  
+                        </div>
+                    </div>
+                </div>  
+            </form>
+        </div>
+            
+        <div id="logout">
+            <a href="index.html" id="logoutText">Logout</a>
+        </div>
+        
+    <script>
+        
+        function change1() {
+            document.getElementById("descriptionText").innerHTML = "Economy Class: This is our cheapest of our three booking options. But that is not to say that you won't still be having the time of your life. Notice the detailed retro themed interior, perfect for the entire family to live comfortably. And of course do not forget the beautiful view you get into space. Price starts at $1,500 per person";
+        }
+        
+        function change2() {
+            document.getElementById("descriptionText").innerHTML = "2nd Class: With a wide open room, sleek modern design, and a bed that cannot be matched, this booking option is the very definition of comfortable living. All 2nd Class rooms are placed in convienient locations including our spas, our dining areas, recreation centers, and much more! Price starts at $5,000 per person";
+        }
+        
+        function change3() {
+            document.getElementById("descriptionText").innerHTML = "First Class: From robot butlers to serve you at any time, to all of the space you could possibly need, to a 270 degree view into space through the massive toggleable windows, this is by far the most luxury living experience you could ever have. There are provided transportation tubes within your room to take you anywhere in the station you'd like to be. Food will be brought to you instantly at your request. The technology in this room was built to deliver an experience to our passengers that is out of this world! Price starts at $15,000 per person";
+        }
+        
+        
+        function appear1() {
+            document.getElementById("purchaseBox1").style.display = 'block';
+            document.getElementById("purchaseBox2").style.display = 'none';
+            document.getElementById("purchaseBox3").style.display = 'none';
+            document.getElementById("totalText").innerHTML = "Total:";
+            window.scrollTo(0,350);
+        }
+        
+        function appear2() {
+            document.getElementById("purchaseBox1").style.display = 'none';
+            document.getElementById("purchaseBox2").style.display = 'block';
+            document.getElementById("purchaseBox3").style.display = 'none';
+            document.getElementById("totalText").innerHTML = "Total:";
+            window.scrollTo(0,350);
+        }
+        
+        function appear3() {
+            document.getElementById("purchaseBox1").style.display = 'none';
+            document.getElementById("purchaseBox2").style.display = 'none';
+            document.getElementById("purchaseBox3").style.display = 'block';
+            document.getElementById("totalText").innerHTML = "Total:";
+            window.scrollTo(0,350);
+        }
+        
+        function updateCost1(){
+            
+            var Guest = document.getElementById("guestAmtInput1").value;
+            
+            /*This checks if the first box is checked*/
+            if(document.getElementById("recBox").checked == true){
+                var rec = 250;
+            }
+            else{
+                var rec = 0;
+            }
+            
+            if(document.getElementById("deckBox").checked == true){
+                var spaceDeck = 120 * Guest;
+            }
+            else{
+                var spaceDeck = 0;
+            }
+            
+            
+            
+            if(Guest > 10){
+                alert("The maximum amount of members is 10");
+            }
+            else if(Guest < 1){
+                alert("You must have at least 1 member");
+            }
+            else{
+                console.log(Guest);
+                var xmlHTTP = new XMLHttpRequest();
+
+                xmlHTTP.onreadystatechange = function(){
+                    console.log(this.status);
+                    if(this.status == 200){
+                        var totalText = document.getElementById("totalText");
+                        console.log(this.responseText);
+                        totalText.innerHTML = this.responseText;
+                    }
+                };
+               //http://ec2-54-159-151-125.compute-1.amazonaws.com/FinalProject/
+
+
+                var reqURL = "http://ec2-54-159-151-125.compute-1.amazonaws.com/FinalProject/EconomyPurchase.php?guests=" + Guest + "&rec=" + rec + "&deck=" + spaceDeck;
+
+                console.log(reqURL);
+
+                xmlHTTP.open("GET", reqURL, true);
+                xmlHTTP.send();
+            }
+        }
+        
+        
+        
+        
+        
+        function updateCost2(){
+            
+            var Guest = document.getElementById("guestAmtInput2").value;
+            
+            /*This checks if the first box is checked*/
+            if(document.getElementById("recBox2").checked == true){
+                var rec = 250;
+            }
+            else{
+                var rec = 0;
+            }
+            
+            if(document.getElementById("deckBox2").checked == true){
+                var spaceDeck = 120 * Guest;
+            }
+            else{
+                var spaceDeck = 0;
+            }
+            
+            
+            
+            if(Guest > 10){
+                alert("The maximum amount of members is 10");
+            }
+            else if(Guest < 1){
+                alert("You must have at least 1 member");
+            }
+            else{
+                console.log(Guest);
+                var xmlHTTP = new XMLHttpRequest();
+
+                xmlHTTP.onreadystatechange = function(){
+                    console.log(this.status);
+                    if(this.status == 200){
+                        var totalText = document.getElementById("totalText2");
+                        console.log(this.responseText);
+                        totalText.innerHTML = this.responseText;
+                    }
+                };
+               //http://ec2-54-159-151-125.compute-1.amazonaws.com/FinalProject/
+
+
+                var reqURL = "http://ec2-54-159-151-125.compute-1.amazonaws.com/FinalProject/SecondPurchase.php?guests=" + Guest + "&rec=" + rec + "&deck=" + spaceDeck;
+
+                console.log(reqURL);
+
+                xmlHTTP.open("GET", reqURL, true);
+                xmlHTTP.send();
+            }
+        }
+        
+        function updateCost3(){
+            
+            var Guest = document.getElementById("guestAmtInput3").value;
+            
+            /*This checks if the first box is checked*/
+            if(document.getElementById("recBox3").checked == true){
+                var rec = 250;
+            }
+            else{
+                var rec = 0;
+            }
+            
+            if(document.getElementById("deckBox3").checked == true){
+                var spaceDeck = 120 * Guest;
+            }
+            else{
+                var spaceDeck = 0;
+            }
+            
+            
+            
+            if(Guest > 10){
+                alert("The maximum amount of members is 10");
+            }
+            else if(Guest < 1){
+                alert("You must have at least 1 member");
+            }
+            else{
+                console.log(Guest);
+                var xmlHTTP = new XMLHttpRequest();
+
+                xmlHTTP.onreadystatechange = function(){
+                    console.log(this.status);
+                    if(this.status == 200){
+                        var totalText = document.getElementById("totalText3");
+                        console.log(this.responseText);
+                        totalText.innerHTML = this.responseText;
+                    }
+                };
+               //http://ec2-54-159-151-125.compute-1.amazonaws.com/FinalProject/
+
+
+                var reqURL = "http://ec2-54-159-151-125.compute-1.amazonaws.com/FinalProject/FirstPurchase.php?guests=" + Guest + "&rec=" + rec + "&deck=" + spaceDeck;
+
+                console.log(reqURL);
+
+                xmlHTTP.open("GET", reqURL, true);
+                xmlHTTP.send();
+            }
+        }
+        
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("openBar").style.display = 'none';
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("openBar").style.display = 'block';
+        }
+        
+    </script>
+    </body>
+</html>

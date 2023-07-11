@@ -1,0 +1,715 @@
+/*
+body{
+    background-color: #00112c;
+}
+*/
+
+h1{
+    font-family: 'Major Mono Display', monospace;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#mainTitle{
+    position: absolute;
+    width: 75%;
+    font-size: 75px;
+    z-index: 1;
+    color: whitesmoke;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#starBackground{
+    width 1300px;
+    height: 1900px;
+    position: absolute;
+    top: -800px;
+    left: -600px;
+    text-align: center;
+}
+
+#starBox{
+/*    border: 2px solid black;*/
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 650px;
+    display: block;
+    box-shadow: 0 0 70px black;
+    font-family: 'Major Mono Display', monospace;
+/*    border-radius: 10%;*/
+    margin-bottom: 8px;
+}
+
+.rotate {
+  animation: rotation 400s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+#planet{
+    width: 170%;
+    position: absolute;
+    top: 300px;
+    left: -33%;
+}
+
+#mainWrapper{
+    width: 100%;
+    height: 1000px;
+    background-color: #5c5c5c;
+    width: 100%;
+    height: 1000px;
+    background: linear-gradient(#4a3257, #1d1422);
+}
+
+#spaceman{
+    width: 150px;
+    position: absolute;
+/*
+    animation-name: floating; 
+    animation-duration: 5s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out;
+*/
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+/*    border: 2px solid whitesmoke;*/
+}
+
+/*animation inspired by https://www.geeksforgeeks.org/css-floating-animation/*/
+@keyframes floating { 
+    0% { transform: translate(0,  0px); } 
+    50%  { transform: translate(0, 20px); } 
+    100%   { transform: translate(0, -0px); }     
+}
+
+.spacetext{
+    font-family: 'Orbitron', sans-serif;
+}
+
+#welcome{
+    position: absolute;
+    z-index: 0;
+    width: 90%;
+    max-width: 800px;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 65px;
+    border: 2px solid whitesmoke;
+    padding: 15px;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#loginWrapper{
+    position: absolute;
+    width: 75%;
+    height: 650px;
+    background-color: #374f90;
+    border-radius: 50px;
+/*    box-shadow: 0 0 50px black;*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#formWrapper{
+    position: absolute;
+    width: 50%;
+    height: 200px;
+/*    border: 2px solid whitesmoke;*/
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#username{
+    width: 100%;
+    max-width: 500px;
+    height: 30px;
+    border: none;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    background-color: whitesmoke;
+}
+
+#password{
+    position: absolute;
+    margin-top: 100px;
+    width: 100%;
+    max-width: 500px;
+    height: 30px;
+    border: none;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    background-color: whitesmoke;
+}
+
+input{
+    text-align: center;
+}
+
+#submit{
+    position: absolute;
+    margin-top: 100px;
+    width: 100%;
+    max-width: 500px;
+    height: 30px;
+    border: none;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    background-color: #539ddd;
+}
+
+.titleText{
+    color: whitesmoke;
+    font-size: 90px;
+}
+
+#aboutWrapper{
+    position: absolute;
+    top: 20%;
+    padding-left: 50px;
+}
+
+.PText{
+    font-family: 'Orbitron', sans-serif;
+    color: whitesmoke;
+}
+
+#descriptionWrapper{
+    width: 850px;
+    height: 300px;
+    position: absolute;
+    top: 40%;
+    left: 3.3%;
+}
+
+#stars{
+    width: 600px;
+    background-repeat: repeat-y;
+}
+
+.cardContainer{
+    border: 2px solid white;
+    border-radius: 20px;
+    flex: 30%;
+    width: 100%;
+    height: 350px;
+    margin-left: 1%;
+    margin-right: 1%;
+    overflow: hidden;
+}
+
+/*This code was inspired by https://codepen.io/giana/pen/BZaGyP*/
+.cardContainer:hover,
+.cardContainer:focus {
+    box-shadow: 0 10px 10px -4px #ba4dea;
+    transform: translateY(-0.5em);
+    transition: 1s;
+}
+
+#columnsWrapper{
+    width: 80%;
+    height: 380px;
+    margin-left: auto;
+    margin-right: auto;
+/*
+    position: absolute;
+    top: 72%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+*/
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+.cardImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+            
+#bookingOptions{
+    color: whitesmoke;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    font-size: 75px;
+}
+            
+#observationDeck{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+/*    z-index: -1;*/
+/*    left: 50%;*/
+    border: 2px solid white;
+}
+            
+#observationIMG{
+    position: absolute;
+    top: -415px;
+    left: -119px;
+    z-index: -2;
+}
+
+.slideshowContainer {
+    width: 70%;
+/*
+    max-width: 1000px;
+    min-width: 1000px;
+*/
+    height: 500px;
+    position: relative;
+    border: 2px solid white;
+    border-radius: 25px;
+    overflow: hidden;
+    top: 500px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(189, 101, 196, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.galleryImage{
+    width: 100%;
+    min-width: 800px;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+#describeBox{
+    background-color: #884c9a;
+    border-radius: 35px;
+    padding: 15px;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#descriptionText{
+    color: whitesmoke;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#purchaseBox1{
+/*    position: absolute;*/
+    position: relative;
+    width: 80%;
+    height: 600px;
+    background-color: #374f90;
+    border-radius: 50px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+/*
+    top: 950px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+*/
+    display: none;
+}
+
+#purchaseBox2{
+    position: relative;
+    width: 80%;
+    height: 600px;
+    background-color: #374f90;
+    border-radius: 50px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}
+
+#purchaseBox3{
+    position: relative;
+    width: 80%;
+    height: 600px;
+    background-color: #374f90;
+    border-radius: 50px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}
+
+.totalBox{
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    color: whitesmoke;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 50px;
+    background-color: #83519a;
+}
+
+.totalText{
+    font-size: 25px;
+}
+
+.totalWrapper{
+    position: absolute;
+    width: 30%;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#optionsWrapper{
+    width: 80%;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*This code is inspired from https://www.w3schools.com/howto/howto_js_sidenav.asp*/
+/* The side navigation menu */
+.sidenav {
+    font-family: 'Orbitron', sans-serif;
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #b063d3;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    font-family: 'Orbitron', sans-serif;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: whitesmoke;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+#openBar{
+    position: absolute;
+    width: 80px;
+    z-index: 10;
+    left: 5%;
+    top: 5%;
+}
+
+#menuIcon{
+    width: 80px;
+}
+
+.leftColumn{
+    float: left;
+    width: 32.9%;
+    height: 500px;
+}
+
+.middleColumn{
+    float: left;
+    width: 32.9%;
+    height: 500px;
+}
+
+.rightColumn{
+    float: left;
+    width: 32.9%;
+    height: 500px;
+}
+
+.guestAmtInput{
+    width: 30%;
+    height: 30px;
+    margin-top: 55px;
+    margin-left: 34%;
+    margin-right: 34%;
+    border: none;
+    background-color: #83519a;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 15px;
+    color: whitesmoke;
+}
+
+.question{
+    color: whitesmoke;
+    font-family: 'Orbitron', sans-serif;
+    width: 90%;
+    font-size: 20px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.submitButton{
+    width: 50%;
+    height: 50px;
+    margin-top: 75px;
+    margin-left: 25%;
+    margin-right: 25%;
+    border: none;
+    background-color: #83519a;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 15px;
+    color: whitesmoke;
+}
+
+.checkBox{
+    width: 50px;
+    height: 50px;
+    margin-left: 50px;
+}
+
+.checkText{
+    color: whitesmoke;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#videoFrame{
+    position: absolute;
+    width: 50%;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid whitesmoke;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+#video{
+    width: 100%;
+    height: 100%;
+}
+
+#rocket{
+    width: 500px;
+    position: absolute;
+    left: 1000px;
+    top: 100px;
+}
+
+
+
+
+
+/*For the bootstrap*/
+.hoverable {
+  display: inline-block;
+  backface-visibility: hidden;
+  vertical-align: middle;
+  position: relative;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  tranform: translateZ(0);
+  transition-duration: .3s;
+  transition-property: transform;
+}
+
+.hoverable:before {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+  /* W3C */
+  transition-duration: 0.3s;
+  transition-property: transform, opacity;
+}
+
+.hoverable:hover, .hoverable:active, .hoverable:focus {
+  transform: translateY(-5px);
+}
+
+.hoverable:hover:before, .hoverable:active:before, .hoverable:focus:before {
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+@keyframes bounce-animation {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+.bounce {
+  animation-name: bounce-animation;
+  animation-duration: 2s;
+}
+
+#soundDescription{
+    color: whitesmoke;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 40px;
+}
+
+#logoutText{
+    color: whitesmoke;
+    margin: 85px;
+    font-family: 'Orbitron', sans-serif;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+#logout{
+    background-color: #83519a;
+    width: 20%;
+    height: 50px;
+    border-radius: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 25px;
+}
+
+#loggedIn{
+    position: absolute;
+    border: 2px solid whitesmoke;
+    border-radius: 15px;
+    padding: 10px;
+    left: 78%;
+    top: 60px;
+}
